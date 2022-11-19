@@ -42,6 +42,7 @@ const convertToTextNode=(item,value)=>{
 
 document.addEventListener("DOMContentLoaded",()=>{
     document.body.addEventListener("click",()=>{nodeValueEqualizer()})
+    nodeValueEqualizer();
 })
 
-nodeValueEqualizer();
+
