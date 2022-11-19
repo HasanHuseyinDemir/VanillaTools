@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/HasanHuseyinDemir/VanillaTools/Nodify/Nodify.min-1.02.js"></script>
+    <title>TextNode Counter</title>
+</head>
+<body>
+    
+    <div>
+
+        <h1 title="Hasan Hüseyin Demir">TextNode Counter</h1>
+        <p class="count">Value : </p>
+        <button onclick="count++" class="count">Increase </button>
+        <button onclick="count--" class="count">Decrease </button>
+        <p id="test">State : </p>
+        <br>
+        <button onclick="destroyNodes('counts')">Destroy Count Nodes</button>
+        <button onclick="destroyNodes('biggerSmaller',true)">Destroy BiggerSmaller Nodes</button>
+        <p data="count" id="countPlusFive"></p>
+    </div>
+
+    <script>
+        let count=0;
+        /*
+        *   createTextNode(targetElement,value(String),nodeId)
+        *   
+        *   convertToTextNode(to,value(String))
+        *
+        *   destroyNodes(nodeId,boolean) Deletes nodes with the same id 
+        *   if the second argument is true it will completely delete with text content
+        */
+        createTextNode(".count","count","counts");
+        createTextNode("#test","count>=5?'Bigger than 5':'Smaller than 5'","biggerSmaller");
+        convertToTextNode("#convertNode","count");
+
+        //If the second argument is empty, it takes the data attribute value in the target element and executes it.
+        convertToTextNode("#countPlusFive");
+    </script>
+</body>
+</html>
