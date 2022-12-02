@@ -37,3 +37,10 @@ Object.defineProperty(Object.prototype,"log",{
 Object.defineProperty(Object.prototype,"type",{
     get:function(){return typeof this}
 })
+
+Object.defineProperty(Array.prototype,"pickRandom",{
+    get:function(){
+        let randomIndex=Math.floor(Math.random()*this.length);
+        return this[randomIndex];
+    }
+})
